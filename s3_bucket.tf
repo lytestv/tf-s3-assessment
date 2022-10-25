@@ -1,11 +1,9 @@
 # Made an AWS Account and IAM user to get these credentials. Could pass it in as a secret 
 # Not sure if I need to for this assessment.
 provider "aws" {
-
     region = "us-east-1"
     access_key = "AKIAQIUTVK6BORHOPVYA"
     secret_key = "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"
-
 }
 
 # Create an S3 bucket
@@ -40,15 +38,10 @@ resource "aws_s3_bucket_versioning" "versioning_configuration" {
 
 # Uploading a text file to S3 through terraform as an example
 resource "aws_s3_bucket_object" "object" {
-
   bucket = var.bucket[0].id
-  
   key    = "profile"
-
   acl    = "private"  # or can be "public-read"
-
   source = "/Users/test/terraform/testfile.txt"
-
   etag = filemd5("/Users/test/terraform/testfile.txt")
 
 }
