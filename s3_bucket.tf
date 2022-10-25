@@ -2,8 +2,8 @@
 # Not sure if I need to for this assessment.
 provider "aws" {
     region = "us-east-1"
-    access_key = "AKIAQIUTVK6BORHOPVYA"
-    secret_key = "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"
+    access_key = "Taking out my actual account ID"
+    secret_key = "Taking out my secret key"
 }
 
 # Create an S3 bucket
