@@ -13,7 +13,7 @@ variable "bucket" {
 }
 
 # Creating extra var for s3 bucket resource itself. 
-# For blocking access + versioning I need to pass in an ID which required me to pass in a list and refrence first item in the list [0]
+# For blocking access + versioning + upload I need to pass in an ID which required me to pass in a list and reference the first item in the list [0]
 variable "bucket_name" {
     type = string
 }
